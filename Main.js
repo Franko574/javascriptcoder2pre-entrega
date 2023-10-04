@@ -113,27 +113,24 @@
         function limpiarTexto(texto) {
             return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
         }
-
-        // Función para buscar y mostrar los resultados
+        
         function buscarTrabajo() {
-            // Obtener la categoría ingresada por el usuario
-            const categoriaInput = limpiarTexto(document.getElementById("categoriaInput").value);
-
-            // Elemento donde mostraremos el resultado
+            const categoriaInputVal = document.getElementById("categoriaInput").value;
+            const limpio = limpiarTexto(categoriaInputVal);
             const resultadoDiv = document.getElementById("resultado");
-
-            // Limpiar el contenido anterior
+        
             resultadoDiv.innerHTML = "";
-
-            // Verificar si el campo de búsqueda está vacío
-            if (categoriaInput.trim() === "") {
+        
+            if (limpio.trim() === "") {
                 resultadoDiv.innerHTML = "<p>Por favor, ingrese una categoría para buscar trabajos.</p>";
+                console.clear();  // Limpia la consola cuando el input está vacío
                 return;
             }
-
-            // Buscar trabajos que coincidan con la categoría ingresada
+        
+            let categoriasEncontradas = [];  // Array para guardar las categorías encontradas
+        
             for (const categoria in trabajos) {
-                if (limpiarTexto(categoria).includes(categoriaInput)) {
+                if (limpiarTexto(categoria).includes(limpio)) {
                     const trabajosEnCategoria = trabajos[categoria];
                     resultadoDiv.innerHTML += `<h2>Trabajos en ${categoria}:</h2>`;
                     resultadoDiv.innerHTML += "<ul>";
@@ -141,23 +138,24 @@
                         resultadoDiv.innerHTML += `<li>${trabajo}</li>`;
                     });
                     resultadoDiv.innerHTML += "</ul>";
+        
+                    categoriasEncontradas.push(categoria);  // Agregamos la categoría al array
                 }
             }
-
-            // Si no se encontraron resultados
+        
             if (resultadoDiv.innerHTML === "") {
                 resultadoDiv.innerHTML = "<p>No se encontraron trabajos en la categoría ingresada.</p>";
             }
+        
+            // Mostrar en la consola solo las descripciones de trabajos encontrados
+            if (categoriasEncontradas.length > 0) {
+                console.log("Descripciones de trabajos encontrados:", categoriasEncontradas.join(", "));
+            }
         }
-
-        // Obtener el input de búsqueda
-        const categoriaInput = document.getElementById("categoriaInput");
-
-        // Escuchar cambios en el input para buscar automáticamente
-        categoriaInput.addEventListener("input", buscarTrabajo);
-
-        // Realizar la primera búsqueda al cargar la página (opcional)
-        buscarTrabajo();
-
-
+        
+        document.getElementById("categoriaInput").addEventListener("input", function() {
+            if (this.value === "") {
+                console.clear();  // Limpia la consola cuando el input está vacío
+            }
+        });
 
