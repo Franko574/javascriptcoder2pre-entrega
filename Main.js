@@ -7,7 +7,7 @@
     -arquitecto
     */
     
-    // Lista de trabajos
+    // Lista de trabajos----------------------------------------------------------------------------------------------------------------------------------------------->*/
     const trabajos = {
         "diseñador web front end": [
             "Sr. Front End Developer - Diseñador Web Finalis · Argentina (Híbrido)  hace 3 semanas  · 91 solicitudes",
@@ -31,7 +31,7 @@
         ]
     };
 
-        // Función para eliminar acentos y hacer minúscula la cadena
+        // Función para eliminar acentos y hacer minúscula la cadena -------------------------------------------------------------------------------------------------->*/
         function limpiarTexto(texto) {
             return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
         }
@@ -45,11 +45,11 @@
         
             if (limpio.trim() === "") {
                 resultadoDiv.innerHTML = "<p>Por favor, ingrese una categoría para buscar trabajos.</p>";
-                console.clear();  // Limpia la consola cuando el input está vacío
+                console.clear();  // Limpia la consola cuando el input está vacío-------------------------------------------------------------------------------------->*/
                 return;
             }
         
-            let categoriasEncontradas = [];  // Array para guardar las categorías encontradas
+            let categoriasEncontradas = [];  // Array para guardar las categorías encontradas--------------------------------------------------------------------------->*/
         
             for (const categoria in trabajos) {
                 if (limpiarTexto(categoria).includes(limpio)) {
@@ -61,7 +61,7 @@
                     });
                     resultadoDiv.innerHTML += "</ul>";
         
-                    categoriasEncontradas.push(categoria);  // Agregamos la categoría al array
+                    categoriasEncontradas.push(categoria);  // Agregamos la categoría al array-------------------------------------------------------------------------->*/
                 }
             }
         
@@ -69,7 +69,7 @@
                 resultadoDiv.innerHTML = "<p>No se encontraron trabajos en la categoría ingresada.</p>";
             }
         
-            // Mostrar en la consola solo las descripciones de trabajos encontrados
+            // Mostrar en la consola solo las descripciones de trabajos encontrados-------------------------------------------------------------------------------------->*/
             if (categoriasEncontradas.length > 0) {
                 console.log("Descripciones de trabajos encontrados:", categoriasEncontradas.join(", "));
             }
@@ -77,7 +77,7 @@
         
         document.getElementById("categoriaInput").addEventListener("input", function() {
             if (this.value === "") {
-                console.clear();  // Limpia la consola cuando el input está vacío
+                console.clear();  // Limpia la consola cuando el input está vacío----------------------------------------------------------------------------------------->*/
             }
         });
 
