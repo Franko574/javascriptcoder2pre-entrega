@@ -31,53 +31,149 @@
         ]
     };
 
-        // Función para eliminar acentos y hacer minúscula la cadena -------------------------------------------------------------------------------------------------->*/
-        function limpiarTexto(texto) {
-            return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    // Función para eliminar acentos y hacer minúscula la cadena
+    function limpiarTexto(texto) {
+        return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    }
+
+    // Función para buscar trabajos
+    function buscarTrabajo() {
+        const categoriaInputVal = document.getElementById("categoriaInput").value;
+        const limpio = limpiarTexto(categoriaInputVal);
+        const resultadoDiv = document.getElementById("resultado");
+
+        resultadoDiv.innerHTML = "";
+
+        if (limpio.trim() === "") {
+            resultadoDiv.innerHTML = "<p>Por favor, ingrese una categoría para buscar trabajos.</p>";
+            console.clear();  // Limpia la consola cuando el input está vacío
+            return;
         }
-        
-        function buscarTrabajo() {
-            const categoriaInputVal = document.getElementById("categoriaInput").value;
-            const limpio = limpiarTexto(categoriaInputVal);
-            const resultadoDiv = document.getElementById("resultado");
-        
-            resultadoDiv.innerHTML = "";
-        
-            if (limpio.trim() === "") {
-                resultadoDiv.innerHTML = "<p>Por favor, ingrese una categoría para buscar trabajos.</p>";
-                console.clear();  // Limpia la consola cuando el input está vacío-------------------------------------------------------------------------------------->*/
+
+        let categoriasEncontradas = [];
+
+        for (const categoria in trabajos) {
+            if (limpiarTexto(categoria).includes(limpio)) {
+                const trabajosEnCategoria = trabajos[categoria];
+                resultadoDiv.innerHTML += `<h2>Trabajos en ${categoria}:</h2>`;
+                resultadoDiv.innerHTML += "<ul>";
+                trabajosEnCategoria.forEach(trabajo => {
+                    resultadoDiv.innerHTML += `<li>${trabajo}</li>`;
+                });
+                resultadoDiv.innerHTML += "</ul";
+
+                categoriasEncontradas.push(categoria);
+            }
+        }
+
+        if (categoriasEncontradas.length > 0) {
+            console.log("Descripciones de trabajos encontrados:", categoriasEncontradas.join(", "));
+            // Guardar los resultados en el Local Storage
+            localStorage.setItem("ultimaBusqueda", JSON.stringify(categoriasEncontradas));
+        }
+    }
+
+    // Cargar la última búsqueda almacenada
+    function cargarUltimaBusqueda() {
+        const ultimaBusqueda = localStorage.getItem("ultimaBusqueda");
+        if (ultimaBusqueda) {
+            const resultadosGuardados = JSON.parse(ultimaBusqueda);
+            console.log("Última búsqueda guardada:", resultadosGuardados.join(", "));
+        }
+    }
+
+    
+    const categoriaInput = document.getElementById("categoriaInput");
+    categoriaInput.addEventListener("input", function () {
+        if (this.value === "") {
+            console.clear();
+            cargarUltimaBusqueda();
+        }
+    });
+
+    cargarUltimaBusqueda();
+    
+
+
+
+    // Hacer que se muestre el resulatdo y que te quede guardado que la ultima busqueda que hiciste me  muestra un error que tengo que revisar
+    /*       const input = document.querySelector('.input-btn input');
+        const listTasks = document.querySelector('.list-tasks ul');
+        const message = document.querySelector('.list-tasks');
+        let tasks = [];
+
+        eventListeners();
+        function eventListeners(){
+            document.addEventListener('DOMContentLoaded', () => {
+                tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+                createHTML();
+            });
+
+            listTasks.addEventListener('click', deleteTask);
+        }
+
+        function deleteTask(e){
+            if (e.target.tagName == 'SPAN') {
+                const deleteId = parseInt(e.target.getAttribute('task-id'));
+                tasks = tasks.filter(task => task.id !== deleteId);
+                createHTML();
+            }
+        }
+
+        function deleteAll(){
+            tasks = [];
+            createHTML();
+        }
+
+        function addTasks(){
+            const task = input.value;
+            if (task === '') {
+                showError('The field is empty...');
                 return;
             }
-        
-            let categoriasEncontradas = [];  // Array para guardar las categorías encontradas--------------------------------------------------------------------------->*/
-        
-            for (const categoria in trabajos) {
-                if (limpiarTexto(categoria).includes(limpio)) {
-                    const trabajosEnCategoria = trabajos[categoria];
-                    resultadoDiv.innerHTML += `<h2>Trabajos en ${categoria}:</h2>`;
-                    resultadoDiv.innerHTML += "<ul>";
-                    trabajosEnCategoria.forEach(trabajo => {
-                        resultadoDiv.innerHTML += `<li>${trabajo}</li>`;
-                    });
-                    resultadoDiv.innerHTML += "</ul>";
-        
-                    categoriasEncontradas.push(categoria);  // Agregamos la categoría al array-------------------------------------------------------------------------->*/
-                }
-            }
-        
-            if (resultadoDiv.innerHTML === "") {
-                resultadoDiv.innerHTML = "<p>No se encontraron trabajos en la categoría ingresada.</p>";
-            }
-        
-            // Mostrar en la consola solo las descripciones de trabajos encontrados-------------------------------------------------------------------------------------->*/
-            if (categoriasEncontradas.length > 0) {
-                console.log("Descripciones de trabajos encontrados:", categoriasEncontradas.join(", "));
-            }
-        }
-        
-        document.getElementById("categoriaInput").addEventListener("input", function() {
-            if (this.value === "") {
-                console.clear();  // Limpia la consola cuando el input está vacío----------------------------------------------------------------------------------------->*/
-            }
-        });
 
+            const taskObj = {
+                task,
+                id: Date.now()
+            }
+            tasks = [...tasks, taskObj]
+
+            createHTML();
+            input.value = '';
+        }
+
+        function createHTML(){
+            clearHTML();
+
+            if (tasks.length > 0) {
+                tasks.forEach(task => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `${task.task} <span task-id="${task.id}" >X</span>`;
+
+                    listTasks.appendChild(li);
+                });
+            }
+
+            sincronizationStorage();
+        }
+
+        function sincronizationStorage(){
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+        }
+
+        function showError(error){
+            const messageError = document.createElement('p');
+            messageError.textContent = error;
+            messageError.classList.add('error');
+
+            message.appendChild(messageError);
+            setTimeout(() => {
+                messageError.remove();
+            },2000);
+
+        }
+
+        function clearHTML(){
+            listTasks.innerHTML = '';
+        }
+          */
