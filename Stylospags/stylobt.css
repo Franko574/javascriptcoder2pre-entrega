@@ -1,0 +1,309 @@
+/* Header Arranca aca--------------------------------------------------------------------------------------------------------- */
+:root {
+    --negro-principal: rgb(0,0,0);
+}
+
+
+html {
+    padding: 0;
+    margin: 0;
+  }
+
+/* Header Principal */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Tipografia Montserrat Medium 500 , Montserrat light ,Montserrat Regular */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+/* Header tipografia */
+li, a, button {
+font-size: 16px;
+font-weight: 400;
+font-display: swap; 
+text-decoration: none;
+}
+
+/* Header Principal Stylo Flexbox */
+.header {
+margin: 0;
+background-color: var(--negro-principal);
+padding: 0;
+}
+
+.header > .container {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.header ul {
+    padding: 0;
+}
+
+.header li, .header a, .header button {
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+
+.header button {
+    font-weight: 600;
+    margin-left: 16px;
+}
+
+/* Logo Señalador */
+.Logo {
+cursor: pointer;
+margin-right: auto ;
+}
+
+svg.Logo > * {
+    fill: white;
+}
+
+.navegacion_principal {
+list-style: none;
+margin: 0 !important;
+}
+
+/* Lista Orden */
+.navegacion_principal li {
+display: inline-block;
+padding: 0px 20px;
+
+}
+
+/* Tiempo Color */
+.navegacion_principal li a {
+transition: all 0.3s ease 0s;
+}
+
+/* Botton Hover */
+.navegacion_principal li a:hover {
+color: blue;
+}
+
+/* Botton Stylo */
+button {
+padding: 9px 25px;
+background-color: blue;
+border: none;
+border-radius: 50px;
+cursor: pointer;
+transition: all 0.3s ease 0s;
+font-family: Arial, Helvetica, sans-serif;
+font-weight:600;
+}
+
+button:hover {
+background-color: rgba(7, 0, 75, 0.4);
+}  
+/* Header Termina aca--------------------------------------------------------------------------------------------------------- */
+
+/* Cuadrado Principal Con Texto--------------------------------------------------------------------------------------------------------- */
+
+/* Estilos para el texto principal */
+
+/* Bloque fondo degradado */
+.Bloque-pr {
+max-width: 100%;
+height: 100px;
+}
+
+/* Degradado */
+.Background {
+    background-image:linear-gradient(to top right ,grey,rgb(36, 36, 36) ,black);
+    max-width: 100%;
+    height: 650px;
+    
+}
+
+/* Stylos texo */
+.textos_main_principal .h2 strong .h2 .h3 {
+    margin-top: 100px;
+}
+
+.textos_main_principal {
+    margin-bottom: 100px;
+  }
+
+  .textos_main_principal h2 {
+    font-size: 36px;
+    color: #ffffff;
+  }
+
+  .textos_main_principal h2 strong {
+    font-size: 42px;
+  }
+
+  .textos_main_principal h3 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-top: 20px;
+  }
+
+  .textos_main_principal hr {
+      width: 30%;
+  }
+/* Cuadrado Principal Con Texto Termina aca --------------------------------------------------------------------------------------------------------- */
+
+
+/* SliderShow Arranca Aca --------------------------------------------------------------------------------------------------------- */
+  @-webkit-keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 7));
+    }
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 7));
+    }
+  }
+  .slider {
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  .slider::before, .slider::after {
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+  }
+  .slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+  .slider::before {
+    left: 0;
+    top: 0;
+  }
+  .slider .slide-track {
+    -webkit-animation: scroll 40s linear infinite;
+            animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+  }
+  .slider .slide {
+    height: 100px;
+    width: 250px;
+  }
+/* SliderShow Termina Aca --------------------------------------------------------------------------------------------------------- */
+
+
+/* Cards Con Imagenes --------------------------------------------------------------------------------------------------------- */
+
+  .espacioblanco {
+    max-width: 100px;
+    height: 150px;
+  }
+  .fondo_contenedor {
+    background-color: rgb(221, 221, 221);
+    max-width: 100%;
+    height: fit-content;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+  }
+  
+  .Nuestros_servicios {
+  margin-bottom: 50px;
+  }
+
+  .col p {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-weight: 400;
+  }
+
+.card-body {
+    margin-bottom: 50px;
+}
+
+/* Cards con Imagenes Termina aca --------------------------------------------------------------------------------------------------------- */
+
+  .espacioblanco2 {
+    max-width: 500px;
+    height: 150px;
+  }
+
+  .fondo_contenedor2 { 
+    max-width: 100%;
+    height: fit-content;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+  }
+
+  .Encontra_Servicio {
+    margin-bottom: 30px;
+  }
+ 
+  .card-img-top1 {
+    width: 20%;
+  }
+
+/* Footer Bloque --------------------------------------------------------------------------------------------------------- */
+ 
+	/*Footer encuesta*/
+	.footer-encuesta{
+		height: 40px;
+		border-top: 1px solid black;
+	}
+	
+		.footer-encuesta .container{
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: right;
+		}
+		
+		.footer-encuesta-texto{
+			cursor: pointer;
+		}
+
+
+
+/* Footer --------------------------------------------------------------------------------------------------------- */
+  #footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    width: 100%;
+    height: 250px;
+    display: grid;
+  }
+
+  .contendor_footer_datos {
+    text-align: center;
+  
+  }
+
+  .contendor_footer_datos p {
+    margin: 5px 0;
+  }
+
+/* Footer Termina Aca--------------------------------------------------------------------------------------------------------- */
+

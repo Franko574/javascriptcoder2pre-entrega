@@ -1,0 +1,681 @@
+/* Header Arranca aca--------------------------------------------------------------------------------------------------------- */
+:root {
+    --negro-principal: rgb(0,0,0);
+}
+
+
+html {
+    padding: 0;
+    margin: 0;
+  }
+
+/* Header Principal */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Tipografia Montserrat Medium 500 , Montserrat light ,Montserrat Regular */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+/* Header tipografia */
+li, a, button {
+font-size: 16px;
+font-weight: 400;
+font-display: swap; 
+text-decoration: none;
+}
+
+/* Header Principal Stylo Flexbox */
+header {
+margin: 0;
+background-color: var(--negro-principal);
+}
+
+header > .container {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+header ul {
+    padding: 0;
+}
+
+header li, header a, header button {
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+
+header button {
+    font-weight: 600;
+    margin-left: 16px;
+}
+
+/* Logo Señalador */
+.Logo {
+cursor: pointer;
+margin-right: auto ;
+}
+
+svg.Logo > * {
+    fill: white;
+}
+
+.navegacion_principal {
+list-style: none;
+margin: 0 !important;
+}
+
+/* Lista Orden */
+.navegacion_principal li {
+display: inline-block;
+padding: 0px 20px;
+
+}
+
+/* Tiempo Color */
+.navegacion_principal li a {
+transition: all 0.3s ease 0s;
+}
+
+/* Botton Hover */
+.navegacion_principal li a:hover {
+color: blue;
+}
+
+/* Botton Stylo */
+button {
+padding: 9px 25px;
+background-color: blue;
+border: none;
+border-radius: 50px;
+cursor: pointer;
+transition: all 0.3s ease 0s;
+font-family: Arial, Helvetica, sans-serif;
+font-weight:600;
+}
+
+button:hover {
+background-color: rgba(7, 0, 75, 0.4);
+}  
+/* Header Termina aca--------------------------------------------------------------------------------------------------------- */
+
+
+/* Cuadrado Principal Con Texto--------------------------------------------------------------------------------------------------------- */
+
+/* Estilos para el texto principal */
+
+/* Bloque fondo degradado */
+.Bloque-pr {
+max-width: 100%;
+height: 100px;
+}
+
+/* Degradado */
+.Background {
+    background-image:linear-gradient(to top right ,grey,rgb(36, 36, 36) ,black);
+    max-width: 100%;
+    height: 350px;
+    
+}
+
+/* Stylos texo */
+.textos_main_principal .h2 strong .h2 .h3 {
+    margin-top: 100px;
+}
+
+.textos_main_principal {
+    margin-bottom: 100px;
+  }
+
+  .textos_main_principal h2 {
+    font-size: 36px;
+    color: #ffffff;
+  }
+
+  .textos_main_principal h2 strong {
+    font-size: 42px;
+  }
+
+  .textos_main_principal h3 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-top: 20px;
+  }
+
+  .textos_main_principal hr {
+      width: 30%;
+  }
+/* Cuadrado Principal Con Texto Termina aca --------------------------------------------------------------------------------------------------------- */
+
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
+
+body{
+  height: 100%; 
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #dbdbdb; 
+}
+
+
+.contact_form{  
+  width: 460px; 
+  height: auto;
+  margin: 80px auto;
+  border-radius: 10px;  
+  padding-top: 30px;
+  padding-bottom: 20px;  
+  background-color: #fbfbfb; 
+  padding-left: 30px; 
+}
+
+
+input{
+  background-color: #fbfbfb; 
+  width: 408px; 
+  height: 40px; 
+  border-radius: 5px;  
+  border-style: solid; 
+  border-width: 1px; 
+  border-color: #3a00db; 
+  margin-top: 10px;  
+  padding-left: 10px;
+  margin-bottom: 20px; 
+}
+
+
+textarea {
+  background-color: #fbfbfb; 
+  width: 405px; 
+  height: 150px; 
+  border-radius: 5px;  
+  border-style: solid; 
+  border-width: 1px; 
+  border-color: #3a00db; 
+  margin-top: 10px;  
+  padding-left: 10px;
+  margin-bottom: 20px; 
+  padding-top: 15px; 
+}
+
+.Contenedortrabajos{  
+  width: 460px; 
+  height: auto;
+  margin: 80px auto;
+  border-radius: 10px;  
+  padding-top: 30px;
+  padding-bottom: 20px;  
+  background-color: #fbfbfb; 
+  padding-left: 30px; 
+}
+.Contenedortrabajos .resultado{
+  background-color: #fbfbfb; 
+  width: 405px; 
+  height: 150px; 
+  border-radius: 5px;  
+  border-style: solid; 
+  border-width: 1px; 
+  border-color: #3a00db; 
+  margin-top: 10px;  
+  padding-left: 10px;
+  margin-bottom: 20px; 
+  padding-top: 15px; 
+
+}
+.Contenedortrabajos .resultado{  
+  width: 460px; 
+  height: auto;
+  margin: 80px auto;
+  border-radius: 10px;  
+  padding-top: 30px;
+  padding-bottom: 20px;  
+  background-color: #fbfbfb; 
+  padding-left: 30px; 
+}
+
+
+label{
+  display: block; 
+  float: center;  
+}
+
+
+.contact_form button {
+  height: 45px; 
+  padding-left: 5px;
+  padding-right: 5px;   
+  margin-bottom: 20px; 
+  margin-top: 10px;   
+  text-transform: uppercase;
+  background-color: #3a00db; 
+  border-color: #3a00db; 
+  border-style: solid; 
+  border-radius: 10px;  
+  width: 420px;   
+  cursor: pointer;
+}
+
+
+button p{
+  color: #fff; 
+}
+
+span{
+  color: #3a00db; 
+}
+
+
+.aviso{
+  font-size: 13px;  
+  color: #0e0e0e;  
+}
+
+
+h1{
+  font-size: 39px;  
+  text-align: letf; 
+  padding-bottom: 20px; 
+  color: #3a00db;
+}
+
+
+h3{
+  font-size: 16px; 
+  padding-bottom: 30px;
+  color: #0e0e0e;   
+}
+
+
+p{
+  font-size: 14px; 
+  color: #0e0e0e; 
+}
+
+
+::-webkit-input-placeholder {
+ color: #a8a8a8;
+}
+
+
+::-webkit-textarea-placeholder {
+ color: #a8a8a8;
+}
+
+
+.formulario input:focus{
+  outline:0;
+  border: 1px solid #97d848;
+}
+
+
+.formulario textarea:focus{
+  outline:0;
+  border: 1px solid #97d848;
+}
+
+
+/* Footer Bloque --------------------------------------------------------------------------------------------------------- */
+ 
+	/*Footer encuesta*/
+	.footer-encuesta{
+		height: 40px;
+		border-top: 1px solid black;
+	}
+	
+		.footer-encuesta .container{
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: right;
+		}
+		
+		.footer-encuesta-texto{
+			cursor: pointer;
+		}
+
+
+
+/* Footer --------------------------------------------------------------------------------------------------------- */
+  #footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    width: 100%;
+    height: 250px;
+    display: grid;
+    text-align: center;
+    
+  }
+
+
+  .contendor_footer_datos {
+    text-align: center;
+  
+  }
+
+  .contendor_footer_datos.p{
+    margin: 5px 0;
+    color: #fbfbfb;
+    text-align: center;
+  }
+
+  p{
+    font-size: 14px;
+    /* color: #0e0e0e; */
+  }
+
+/* Footer Termina Aca--------------------------------------------------------------------------------------------------------- */
+
+/* Parte buscador --------------------------------------------------------------------------------------------------------------*/
+.Buscador{
+  height: 1000px;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+}
+header > .Buscador {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.search-wrapper {
+  display: flex;
+  max-width:1300px;
+  margin: 10px auto;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+input {
+  font-size: 1rem;
+  max-width: 1300px;
+  background: #fff;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+  height: 55px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+}
+
+.user-cards {
+  display: flex;
+  height: 100px;
+  max-width: 1300px;
+  margin: 10px auto;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  border: 10px solid black;
+  background-color: white;
+  height: 200px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 25px 0px 20px 30px;
+  font-size: 20px;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+}
+
+.card > .header {
+  margin-bottom: .25rem;
+}
+
+.card > .body {
+  font-size: 16px;
+  color: #777;
+}
+
+.hide {
+  display: none;
+}
+
+#liveAlertPlaceholder {
+  padding-top: 6px;
+}
+
+.alert-success {
+  margin: 10px 10px 0px 0px
+
+}
+
+::-webkit-file-upload-button {
+font: inherit;
+-webkit-appearance: button;
+}
+
+button {
+padding: 10px 10px 10px 10px;
+background-color:#0d6efd;
+border-radius: 10px;
+}
+
+.alert {
+--bs-alert-bg: transparent;
+--bs-alert-padding-x: 1rem;
+--bs-alert-padding-y: 1rem;
+--bs-alert-margin-bottom: 1rem;
+--bs-alert-color: inherit;
+--bs-alert-border-color: transparent;
+--bs-alert-border: var(--bs-border-width) solid var(--bs-alert-border-color);
+--bs-alert-border-radius: var(--bs-border-radius);
+--bs-alert-link-color: inherit;
+position: relative;
+padding: var(--bs-alert-padding-y) var(--bs-alert-padding-x);
+margin-bottom: var(--bs-alert-margin-bottom);
+color: var(--bs-alert-color);
+background-color: var(--bs-alert-bg);
+border: var(--bs-alert-border);
+border-radius: var(--bs-alert-border-radius);
+}
+
+.alert-success {
+--bs-alert-color: var(--bs-success-text-emphasis);
+--bs-alert-bg: var(--bs-success-bg-subtle);
+--bs-alert-border-color: var(--bs-success-border-subtle);
+--bs-alert-link-color: var(--bs-success-text-emphasis);
+}
+
+.alert-info {
+--bs-alert-color: var(--bs-info-text-emphasis);
+--bs-alert-bg: var(--bs-info-bg-subtle);
+--bs-alert-border-color: var(--bs-info-border-subtle);
+--bs-alert-link-color: var(--bs-info-text-emphasis);
+}
+
+
+:root,
+[data-bs-theme=light] {
+--bs-blue: #0d6efd;
+--bs-indigo: #6610f2;
+--bs-purple: #6f42c1;
+--bs-pink: #d63384;
+--bs-red: #dc3545;
+--bs-orange: #fd7e14;
+--bs-yellow: #ffc107;
+--bs-green: #198754;
+--bs-teal: #20c997;
+--bs-cyan: #0dcaf0;
+--bs-black: #000;
+--bs-white: #fff;
+--bs-gray: #6c757d;
+--bs-gray-dark: #343a40;
+--bs-gray-100: #f8f9fa;
+--bs-gray-200: #e9ecef;
+--bs-gray-300: #dee2e6;
+--bs-gray-400: #ced4da;
+--bs-gray-500: #adb5bd;
+--bs-gray-600: #6c757d;
+--bs-gray-700: #495057;
+--bs-gray-800: #343a40;
+--bs-gray-900: #212529;
+--bs-primary: #0d6efd;
+--bs-secondary: #6c757d;
+--bs-success: #198754;
+--bs-info: #0dcaf0;
+--bs-warning: #ffc107;
+--bs-danger: #dc3545;
+--bs-light: #f8f9fa;
+--bs-dark: #212529;
+--bs-primary-rgb: 13, 110, 253;
+--bs-secondary-rgb: 108, 117, 125;
+--bs-success-rgb: 25, 135, 84;
+--bs-info-rgb: 13, 202, 240;
+--bs-warning-rgb: 255, 193, 7;
+--bs-danger-rgb: 220, 53, 69;
+--bs-light-rgb: 248, 249, 250;
+--bs-dark-rgb: 33, 37, 41;
+--bs-primary-text-emphasis: #052c65;
+--bs-secondary-text-emphasis: #2b2f32;
+--bs-success-text-emphasis: #0a3622;
+--bs-info-text-emphasis: #055160;
+--bs-warning-text-emphasis: #664d03;
+--bs-danger-text-emphasis: #58151c;
+--bs-light-text-emphasis: #495057;
+--bs-dark-text-emphasis: #495057;
+--bs-primary-bg-subtle: #cfe2ff;
+--bs-secondary-bg-subtle: #e2e3e5;
+--bs-success-bg-subtle: #d1e7dd;
+--bs-info-bg-subtle: #cff4fc;
+--bs-warning-bg-subtle: #fff3cd;
+--bs-danger-bg-subtle: #f8d7da;
+--bs-light-bg-subtle: #fcfcfd;
+--bs-dark-bg-subtle: #ced4da;
+--bs-primary-border-subtle: #9ec5fe;
+--bs-secondary-border-subtle: #c4c8cb;
+--bs-success-border-subtle: #a3cfbb;
+--bs-info-border-subtle: #9eeaf9;
+--bs-warning-border-subtle: #ffe69c;
+--bs-danger-border-subtle: #f1aeb5;
+--bs-light-border-subtle: #e9ecef;
+--bs-dark-border-subtle: #adb5bd;
+--bs-white-rgb: 255, 255, 255;
+--bs-black-rgb: 0, 0, 0;
+--bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+--bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+--bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+--bs-body-font-family: var(--bs-font-sans-serif);
+--bs-body-font-size: 1rem;
+--bs-body-font-weight: 400;
+--bs-body-line-height: 1.5;
+--bs-body-color: #212529;
+--bs-body-color-rgb: 33, 37, 41;
+--bs-body-bg: #fff;
+--bs-body-bg-rgb: 255, 255, 255;
+--bs-emphasis-color: #000;
+--bs-emphasis-color-rgb: 0, 0, 0;
+--bs-secondary-color: rgba(33, 37, 41, 0.75);
+--bs-secondary-color-rgb: 33, 37, 41;
+--bs-secondary-bg: #e9ecef;
+--bs-secondary-bg-rgb: 233, 236, 239;
+--bs-tertiary-color: rgba(33, 37, 41, 0.5);
+--bs-tertiary-color-rgb: 33, 37, 41;
+--bs-tertiary-bg: #f8f9fa;
+--bs-tertiary-bg-rgb: 248, 249, 250;
+--bs-heading-color: inherit;
+--bs-link-color: #0d6efd;
+--bs-link-color-rgb: 13, 110, 253;
+--bs-link-decoration: underline;
+--bs-link-hover-color: #0a58ca;
+--bs-link-hover-color-rgb: 10, 88, 202;
+--bs-code-color: #d63384;
+--bs-highlight-color: #212529;
+--bs-highlight-bg: #fff3cd;
+--bs-border-width: 1px;
+--bs-border-style: solid;
+--bs-border-color: #dee2e6;
+--bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+--bs-border-radius: 0.375rem;
+--bs-border-radius-sm: 0.25rem;
+--bs-border-radius-lg: 0.5rem;
+--bs-border-radius-xl: 1rem;
+--bs-border-radius-xxl: 2rem;
+--bs-border-radius-2xl: var(--bs-border-radius-xxl);
+--bs-border-radius-pill: 50rem;
+--bs-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+--bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+--bs-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+--bs-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+--bs-focus-ring-width: 0.25rem;
+--bs-focus-ring-opacity: 0.25;
+--bs-focus-ring-color: rgba(13, 110, 253, 0.25);
+--bs-form-valid-color: #198754;
+--bs-form-valid-border-color: #198754;
+--bs-form-invalid-color: #dc3545;
+--bs-form-invalid-border-color: #dc3545;
+}
+
+/* Cards Con Imagenes --------------------------------------------------------------------------------------------------------- */
+
+.espacioblanco {
+  max-width: 100px;
+  height: 100px;
+}
+.fondo_contenedor {
+  background-color: rgb(221, 221, 221);
+  max-width: 100%;
+  height: fit-content;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.Nuestros_servicios {
+margin-bottom: 50px;
+}
+
+.col .p {
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-weight: 400;
+  color: #000;
+}
+
+.card-body {
+  margin-bottom: 50px;
+}
+
+/* Cards con Imagenes Termina aca --------------------------------------------------------------------------------------------------------- */
+
+.espacioblanco2 {
+  max-width: 500px;
+  height: 150px;
+}
+
+.fondo_contenedor2 { 
+  max-width: 100%;
+  height: fit-content;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.Encontra_Servicio {
+  margin-bottom: 30px;
+}
+
+.card-img-top1 {
+  width: 20%;
+}
+
+.card.h-100 {
+  padding: 0;
+}

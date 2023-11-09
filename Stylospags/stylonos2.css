@@ -1,0 +1,345 @@
+/* Header Arranca aca--------------------------------------------------------------------------------------------------------- */
+:root {
+    --negro-principal: rgb(0,0,0);
+}
+
+
+html {
+    padding: 0;
+    margin: 0;
+  }
+
+/* Header Principal */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Tipografia Montserrat Medium 500 , Montserrat light ,Montserrat Regular */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+/* Header tipografia */
+li, a, button {
+font-size: 16px;
+font-weight: 400;
+font-display: swap; 
+text-decoration: none;
+}
+
+/* Header Principal Stylo Flexbox */
+header {
+margin: 0;
+background-color: var(--negro-principal);
+}
+
+header > .container {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+header ul {
+    padding: 0;
+}
+
+header li, header a, header button {
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+
+header button {
+    font-weight: 600;
+    margin-left: 16px;
+}
+
+/* Logo Señalador */
+.Logo {
+cursor: pointer;
+margin-right: auto ;
+}
+
+svg.Logo > * {
+    fill: white;
+}
+
+.navegacion_principal {
+list-style: none;
+margin: 0 !important;
+}
+
+/* Lista Orden */
+.navegacion_principal li {
+display: inline-block;
+padding: 0px 20px;
+
+}
+
+/* Tiempo Color */
+.navegacion_principal li a {
+transition: all 0.3s ease 0s;
+}
+
+/* Botton Hover */
+.navegacion_principal li a:hover {
+color: blue;
+}
+
+/* Botton Stylo */
+button {
+padding: 9px 25px;
+background-color: blue;
+border: none;
+border-radius: 50px;
+cursor: pointer;
+transition: all 0.3s ease 0s;
+font-family: Arial, Helvetica, sans-serif;
+font-weight:600;
+}
+
+button:hover {
+background-color: rgba(7, 0, 75, 0.4);
+}  
+/* Header Termina aca--------------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* Cuadrado Principal Con Texto------------------------------------------------------------------------------------------------ */
+
+/* Estilos para el texto principal */
+
+/* Bloque fondo degradado */
+.Bloque-pr {
+    max-width: 100%;
+    height: 100px;
+    }
+    
+    /* Degradado */
+    .Background {
+        background-image:linear-gradient(to top right ,grey,rgb(36, 36, 36) ,black);
+        max-width: 100%;
+        height: 350px;
+        
+    }
+    
+    /* Stylos texo */
+    .textos_main_principal .h2 strong .h2 .h3 {
+        margin-top: 100px;
+    }
+    
+    .textos_main_principal {
+        margin-bottom: 100px;
+      }
+    
+      .textos_main_principal h2 {
+        font-size: 36px;
+        color: #ffffff;
+      }
+    
+      .textos_main_principal h2 strong {
+        font-size: 42px;
+      }
+    
+      .textos_main_principal h3 {
+        font-size: 24px;
+        color: #ffffff;
+        margin-top: 20px;
+      }
+    
+      .textos_main_principal hr {
+          width: 30%;
+      }
+/* Cuadrado Principal Con Texto Termina aca --------------------------------------------------------------------------------------------------------- */
+
+
+/*SLIDER BOOTSTRAP----------------------------------------------------------------------------------------------------------------------------------- */
+#carrusel-principal
+{
+    margin-top: 100px;
+}
+
+#carrusel-principal .carousel-control-next, #carrusel-principal .carousel-control-prev
+{
+    background-color: white;
+    opacity: 1;
+    height: 50px;
+    width: 50px;
+    margin: auto 15px;
+}
+
+.Columnas1 .row p {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 100;
+  margin-top: 10px;
+}
+
+.Columnas1 h2 {
+  margin-top: 20px;
+}
+
+#carrusel-principal .carousel-control-next
+{
+    padding: 14px 13px 14px 16px;
+}
+
+#carrusel-principal .carousel-control-prev
+{
+    padding: 14px 16px 14px 13px;
+}
+
+#carrusel-principal .carousel-indicators [data-bs-target] {
+    background-color: white;
+    border-radius: 0;
+}
+
+.Diferenciamos p {
+  margin-top: 20px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 100;
+}
+
+/*SLIDER BOOTSTRAP--------------------------------------------------------------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+    padding-bottom: 3rem;
+    color: rgb(var(--bs-tertiary-color-rgb));
+  }
+  
+  
+  /* Customizar el carrusel
+  -------------------------------------------------- */
+  
+  /* Carousel base class */
+  .carousel {
+    margin-bottom: 4rem;
+  }
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+  
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+    height: 32rem;
+  }
+  
+  
+  /* MARKETING CONTENT
+  -------------------------------------------------- */
+  
+  /* Center align the text within the three columns below the carousel */
+  .marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  /* rtl:begin:ignore */
+  .marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+  }
+  /* rtl:end:ignore */
+  
+  
+  /* Featurettes
+  ------------------------- */
+  
+  .featurette-divider {
+    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+  }
+  
+  /* Thin out the marketing headings */
+  /* rtl:begin:remove */
+  .featurette-heading {
+    letter-spacing: -.05rem;
+  }
+  
+  /* rtl:end:remove */
+  
+  /* RESPONSIVE CSS
+  -------------------------------------------------- */
+  
+  @media (min-width: 40em) {
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+  
+    .featurette-heading {
+      font-size: 50px;
+    }
+  }
+  
+  @media (min-width: 62em) {
+    .featurette-heading {
+      margin-top: 7rem;
+    }
+  }
+
+  /* Footer Bloque --------------------------------------------------------------------------------------------------------- */
+ 
+	/*Footer encuesta*/
+	.footer-encuesta{
+		height: 40px;
+		border-top: 1px solid black;
+	}
+	
+		.footer-encuesta .container{
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: right;
+		}
+		
+		.footer-encuesta-texto{
+			cursor: pointer;
+		}
+
+
+
+/* Footer --------------------------------------------------------------------------------------------------------- */
+  #footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    width: 100%;
+    height: 250px;
+    display: grid ;
+  }
+
+  .contendor_footer_datos {
+    text-align: center;
+  
+  }
+
+  .contendor_footer_datos p {
+    margin: 5px 0;
+  }
+
+  .container .col {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+  }
+
+/* Footer Termina Aca--------------------------------------------------------------------------------------------------------- */
+
+/* Cuadrado Espacio --------------------------------------------------------------------------------------------------------- */
+
+.cuadradoespa {
+  max-width: 100%;
+  height: 100px;
+}
+
+/* Cuadrado Espacio --------------------------------------------------------------------------------------------------------- */
+
+
+  

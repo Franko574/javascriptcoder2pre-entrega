@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Cssbar.css">
+  <script src="JsBar.js" defer></script>
+  <title>Usuarios</title>
+</head>
+<body>
+    <div class="search-wrapper">
+        <h2 class="usu">Buscar Usuarios</h2>
+        <input type="search" id="search" data-search>
+    </div>
+    <div class="user-cards" data-user-cards-container></div>
+    <template data-user-template>
+        <div class="card">
+            <div class="header" data-header></div>
+            <div class="body" data-body></div>
+            <div id="liveAlertPlaceholder">
+                <button type="button" class="btn btn-primary liveAlertBtn" data-card-button="enviar-solicitud">Enviar Solicitud</button>
+                <button type="button" class="btn btn-primary guardaralertbtn" data-card-button="guardar-busqueda">Guardar Busqueda</button>
+                <div class="alert-container"></div>
+            </div> 
+        </div>
+    </template>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
