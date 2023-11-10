@@ -1,5 +1,3 @@
-/* Esta parte es para un sign in , faltaria crear una parte donde el usuario se logea y crea su perfil*/
-
 // Función para guardar el formulario almacenado
 function saveForm(email, password) {
   const formData = {
@@ -41,6 +39,8 @@ passwordInput.addEventListener("input", function () {
   }
 });
 
+loadAndDisplayData();
+
 // Boton recordarme 
 const rememberMeCheckbox = document.getElementById("flexCheckDefault");
 rememberMeCheckbox.addEventListener("click", function () {
@@ -48,6 +48,15 @@ rememberMeCheckbox.addEventListener("click", function () {
   const password = passwordInput.value;
 
   saveForm(email, password);
+
+  // Muestra la alerta de SweetAlert
+  Swal.fire({
+    position: "top-end",
+    icon: "success",
+    title: "Tus datos han sido guardados",
+    showConfirmButton: false,
+    timer: 1500
+  });
 });
 
 loadAndDisplayData();
