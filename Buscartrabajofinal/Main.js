@@ -1,3 +1,4 @@
+// Base de datos ------------------------------------------------------------------------------>
 const baseDeDatos = [
     {
       id: 1,
@@ -60,16 +61,17 @@ const baseDeDatos = [
       empresa: "ArqTech",
     },
   ];
+  // Base de datos ------------------------------------------------------------------------------>
   
-  // Obtener elementos del DOM
+  // Obtener elementos del DOM ------------------------------------------------------------------>
   const userCardTemplate = document.querySelector("[data-user-template]");
   const userCardContainer = document.querySelector("[data-user-cards-container]");
   const searchInput = document.querySelector("[data-search]");
   
-  // Copiar la base de datos para trabajar con ella
+  // Copiar la base de datos para trabajar con ella --------------------------------------------->
   let users = baseDeDatos.slice();
   
-  // Agregar un evento para filtrar usuarios por búsqueda
+  // Agregar un evento para filtrar usuarios por búsqueda --------------------------------------->
   searchInput.addEventListener("input", (e) => {
     const value = e.target.value.toLowerCase();
     users.forEach((user) => {
@@ -83,22 +85,22 @@ const baseDeDatos = [
     });
   });
   
-  // Crear tarjetas de usuario y asignar eventos
+  // Crear tarjetas de usuario y asignar eventos ---------------------------------------------->
   users.forEach((user) => {
-    // Clonar la plantilla de tarjeta de usuario
+    // Clonar la plantilla de tarjeta de usuario ---------------------------------------------->
     const card = userCardTemplate.content.cloneNode(true).children[0];
   
-    // Obtener elementos de la tarjeta
+    // Obtener elementos de la tarjeta -------------------------------------------------------->
     const header = card.querySelector("[data-header]");
     const body = card.querySelector("[data-body]");
     const enviarSolicitudButton = card.querySelector('[data-card-button="enviar-solicitud"]');
     const guardarBusquedaButton = card.querySelector('[data-card-button="guardar-busqueda"]');
   
-    // Llenar la tarjeta con datos del usuario
+    // Llenar la tarjeta con datos del usuario ------------------------------------------------>
     header.textContent = user.name;
     body.textContent = `Email: ${user.mail}, Trabajo: ${user.trabajo}, Empresa: ${user.empresa}`;
   
-    // Agregar eventos a los botones de la tarjeta
+    // Agregar eventos a los botones de la tarjeta -------------------------------------------->
     enviarSolicitudButton.addEventListener("click", () => {
       appendAlert("Solicitud enviada!", "success", user);
     });
@@ -107,12 +109,12 @@ const baseDeDatos = [
       gualert("Búsqueda Guardada!", "info", user);
     });
   
-    // Agregar la tarjeta al contenedor
+    // Agregar la tarjeta al contenedor ------------------------------------------------------->
     userCardContainer.append(card);
-    user.element = card; // Asignar la tarjeta al objeto de usuario
+    user.element = card; // Asignar la tarjeta al objeto de usuario --------------------------->
   });
   
-  // Función para mostrar alertas de solicitud enviada
+  // Función para mostrar alertas de solicitud enviada ---------------------------------------->
   const appendAlert = (message, type, user) => {
     const card = user.element;
     const wrapper = document.createElement("div");
@@ -128,7 +130,7 @@ const baseDeDatos = [
     alertContainer.append(wrapper);
   };
   
-  // Función para mostrar alertas de búsqueda guardada
+  // Función para mostrar alertas de búsqueda guardada ----------------------------------------------->
   const gualert = (message, type, user) => {
     const card = user.element;
     const wrapper = document.createElement("div");
@@ -144,14 +146,14 @@ const baseDeDatos = [
     alertContainer.append(wrapper);
   };
   
-  // Evento para el botón "Guardar Búsqueda" en el documento
+  // Evento para el botón "Guardar Búsqueda" en el documento ----------------------------------------->
   const trigerbuardar = document.getElementById("guardaralertbtn");
   
   
-  // Chequear para que es, creo que ya no se usa mas
+  // Chequear para que es, creo que ya no se usa mas ------------------------------------------------->
   if (trigerbuardar) {
     trigerbuardar.addEventListener("click", () => {
-      // Llamar a la función gualert con el mensaje apropiado
+      // Llamar a la función gualert con el mensaje apropiado ---------------------------------------->
       gualert("Búsqueda Guardada!", "success");
     });
   }

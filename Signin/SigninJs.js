@@ -1,4 +1,4 @@
-// Función para guardar el formulario almacenado
+// Función para guardar el formulario almacenado ---------------------------------------------->
 function saveForm(email, password) {
   const formData = {
     email,
@@ -6,11 +6,11 @@ function saveForm(email, password) {
   };
   const formDataJSON = JSON.stringify(formData);
 
-  // Almacenar los datos en Local Storage
+  // Almacenar los datos en Local Storage ----------------------------------------------------->
   localStorage.setItem("formData", formDataJSON);
 }
 
-// Función para cargar y mostrar los datos qye tenes guardados
+// Función para cargar y mostrar los datos qye tenes guardados--------------------------------->
 function loadAndDisplayData() {
   const formDataJSON = localStorage.getItem("formData");
 
@@ -21,7 +21,7 @@ function loadAndDisplayData() {
   }
 }
 
-// Te manda la info del "input" en el campo de correo electrónico
+// Te manda la info del "input" en el campo de correo electrónico --------------------------------->
 const emailInput = document.getElementById("floatingInput");
 emailInput.addEventListener("input", function () {
   if (this.value === "") {
@@ -30,7 +30,7 @@ emailInput.addEventListener("input", function () {
   }
 });
 
-// Escuchar el evento "input" en el campo de contraseña
+// Escuchar el evento "input" en el campo de contraseña ------------------------------------------>
 const passwordInput = document.getElementById("floatingPassword");
 passwordInput.addEventListener("input", function () {
   if (this.value === "") {
@@ -41,7 +41,7 @@ passwordInput.addEventListener("input", function () {
 
 loadAndDisplayData();
 
-// Boton recordarme 
+// Boton recordarme------------------------------------------------------------------------------>
 const rememberMeCheckbox = document.getElementById("flexCheckDefault");
 rememberMeCheckbox.addEventListener("click", function () {
   const email = emailInput.value;
@@ -49,7 +49,7 @@ rememberMeCheckbox.addEventListener("click", function () {
 
   saveForm(email, password);
 
-  // Muestra la alerta de SweetAlert
+  // Muestra la alerta de SweetAlert-------------------------------------------------------------->
   Swal.fire({
     position: "top-end",
     icon: "success",
